@@ -6,6 +6,9 @@ PACKAGECONFIG ??= "fdt alsa kvm pie"
 
 PACKAGECONFIG:remove = "${@'kvm' if not os.path.exists('/usr/include/linux/kvm.h') else ''}"
 
+# oe-core 27260be3 introduces jack that is not available on xilinx
+PACKAGECONFIG[jack] = ""
+
 DEPENDS += "pixman-native qemu-xilinx-native bison-native ninja-native meson-native"
 
 do_install:append() {

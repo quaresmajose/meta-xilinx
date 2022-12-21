@@ -8,6 +8,8 @@ PACKAGECONFIG:remove = "${@'kvm' if not os.path.exists('/usr/include/linux/kvm.h
 
 # oe-core 27260be3 introduces jack that is not available on xilinx
 PACKAGECONFIG[jack] = ""
+# oe-core 34afdd0b introduces png that is not available on xilinx
+PACKAGECONFIG[png] = ""
 
 DEPENDS += "pixman-native qemu-xilinx-native bison-native ninja-native meson-native"
 

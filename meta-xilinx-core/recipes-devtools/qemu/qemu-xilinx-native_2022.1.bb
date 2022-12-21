@@ -8,3 +8,5 @@ PACKAGECONFIG ??= "pie"
 
 # oe-core 27260be3 introduces jack that is not available on xilinx
 PACKAGECONFIG[jack] = ""
+# oe-core 34afdd0b introduces png that is not available on xilinx
+PACKAGECONFIG[png] = ""

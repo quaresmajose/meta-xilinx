@@ -23,6 +23,8 @@ BRANCHARG = "${@['nobranch=1', 'branch=${BRANCH}'][d.getVar('BRANCH', True) != '
 SRC_URI = "${REPO};${BRANCHARG}"
 
 SRC_URI:append = " file://0010-configure-Add-pkg-config-handling-for-libgcrypt.patch"
+SRC_URI:append = " file://qemu-guest-agent.init"
+SRC_URI:append = " file://qemu-guest-agent.udev"
 
 S = "${WORKDIR}/git"
 

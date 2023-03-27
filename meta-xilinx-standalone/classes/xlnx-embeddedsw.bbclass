@@ -21,7 +21,7 @@ ESW_REV[2021.1] = "d37a0e8824182597abf31ac3f1087a5321b33ad7"
 ESW_REV[2021.2] = "49c6694fc3cab6b87dd564da58a83bb8656a7c03"
 ESW_REV[2022.1] = "b3d8b420b421730ea505da55b42174dc90f885c1"
 ESW_REV[git] = "b3d8b420b421730ea505da55b42174dc90f885c1"
-SRCREV ??= "${@d.getVarFlag('ESW_REV', d.getVar('ESW_VER')) or '${AUTOREV}'}"
+SRCREV ??= "${@d.getVarFlag('ESW_REV', d.getVar('ESW_VER'))}"
 
 EMBEDDEDSW_BRANCHARG ?= "${@['nobranch=1', 'branch=${BRANCH}'][d.getVar('BRANCH') != '']}"
 EMBEDDEDSW_SRCURI ?= "${REPO};${EMBEDDEDSW_BRANCHARG}"

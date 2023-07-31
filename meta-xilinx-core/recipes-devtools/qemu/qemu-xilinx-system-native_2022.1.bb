@@ -12,6 +12,8 @@ PACKAGECONFIG[jack] = ""
 PACKAGECONFIG[png] = ""
 # oe-core 9afb0fbf introduces debuginfo that is not available on xilinx
 PACKAGECONFIG[debuginfo] = ""
+# oe-core 0866acdc fixes pulseaudio that is not available on xilinx
+PACKAGECONFIG[pulseaudio] = ""
 
 DEPENDS += "pixman-native qemu-xilinx-native bison-native ninja-native meson-native"
 

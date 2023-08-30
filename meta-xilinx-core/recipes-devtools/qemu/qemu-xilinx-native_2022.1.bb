@@ -14,3 +14,5 @@ PACKAGECONFIG[png] = ""
 PACKAGECONFIG[debuginfo] = ""
 # oe-core 0866acdc fixes pulseaudio that is not available on xilinx
 PACKAGECONFIG[pulseaudio] = ""
+# oe-core 0df2247c fixes pulseaudio that is not available on xilinx
+PACKAGECONFIG[dbus-display] = ""

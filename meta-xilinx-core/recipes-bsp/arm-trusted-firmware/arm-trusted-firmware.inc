@@ -80,15 +80,12 @@ EXTRA_OEMAKE:append = "${@bb.utils.contains('MACHINE_FEATURES', 'provencore', ' 
 TFA_BL33_LOAD ?= ""
 EXTRA_OEMAKE:append = "${@' PRELOADED_BL33_BASE=${TFA_BL33_LOAD}' if d.getVar('TFA_BL33_LOAD', True) != '' else ''}"
 
-# Workaround for bl31.elf has a LOAD segment with RWX permissions
-EXTRA_OEMAKE:append = ' TF_LDFLAGS="--no-warn-rwx-segments --fatal-warnings -O1 --gc-sections"'
-
 do_configure() {
 	oe_runmake clean -C ${S} BUILD_BASE=${B} PLAT=${PLATFORM}
 }
 
 do_compile() {
-	oe_runmake -C ${S} BUILD_BASE=${B} PLAT=${PLATFORM} RESET_TO_BL31=1 bl31 V=1
+	oe_runmake -C ${S} BUILD_BASE=${B} PLAT=${PLATFORM} RESET_TO_BL31=1 bl31
 }
 
 do_install() {

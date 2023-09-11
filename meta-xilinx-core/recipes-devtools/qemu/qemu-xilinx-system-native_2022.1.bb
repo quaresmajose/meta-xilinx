@@ -16,6 +16,8 @@ PACKAGECONFIG[debuginfo] = ""
 PACKAGECONFIG[pulseaudio] = ""
 # oe-core 0df2247c fixes pulseaudio that is not available on xilinx
 PACKAGECONFIG[dbus-display] = ""
+# oe-core a7176c3b qemu: Upgrade 8.0.4 -> 8.1.0
+EXTRA_OECONF:remove = "--disable-download"
 
 DEPENDS += "pixman-native qemu-xilinx-native bison-native ninja-native meson-native"
 

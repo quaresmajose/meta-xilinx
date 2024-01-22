@@ -20,6 +20,8 @@ PACKAGECONFIG[dbus-display] = ""
 EXTRA_OECONF:remove = "--disable-download"
 # oe-core d63cadd4 fixes pulseaudio that is not available on xilinx
 PACKAGECONFIG[pipewire] = ""
+# oe-core e7461826 qemu: add PACKAGECONFIG for sndio
+PACKAGECONFIG[sndio] = ""
 
 DEPENDS += "pixman-native qemu-xilinx-native bison-native ninja-native meson-native"
 
